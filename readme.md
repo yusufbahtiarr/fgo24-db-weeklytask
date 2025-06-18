@@ -71,6 +71,7 @@ This project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking
   cinemas {
     int id PK
     string cinema
+    string image_url
   }
 
   locations {
