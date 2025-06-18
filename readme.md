@@ -16,6 +16,8 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
   transactions }o--|| payments : has
   transactions ||--o{ transaction_details : has
   movies ||--o{ transactions : has
+  movies ||--o{ casts : has
+  movies ||--|| directors : has
 
   users {
     int id PK
@@ -42,13 +44,22 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string poster_url
     string backdrop_url
     string title
-    string genre
     date release_date
     int duration
-    string director
-    string cast
     string overview
     string rating
+    string id_director FK
+    string id_genre FK
+    string id_cast FK
+  }
+
+  casts {
+    int id PK
+    string cast
+  }
+  directors {
+    int id PK
+    string director
   }
 
   genres {
