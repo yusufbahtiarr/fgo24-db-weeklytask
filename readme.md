@@ -1,6 +1,6 @@
 # ERD Kukky Booking Ticket
 
-This project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking Ticket system using the Mermaid diagramming tool.
+This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking Ticket system using the Mermaid diagramming tool.
 
 ```mermaid
   erDiagram
@@ -13,6 +13,7 @@ This project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking
   transactions }o--|| locations : has
   transactions }o--|| times : has
   transactions }o--|| payments : has
+  transactions ||--o{ transaction_details : has
   movies ||--o{ transactions : is_booked
 
   users {
@@ -56,9 +57,8 @@ This project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking
 
   transactions {
     int id PK
-    string seats
     int virtual_account_number
-    int price
+    int ticket_price
     date transaction_date
     int id_movies FK
     int id_cinema FK
@@ -66,6 +66,11 @@ This project, presents an Entity-Relationship Diagram (ERD) for an Kukky Booking
     int id_location FK
     int id_payment FK
     int id_user FK
+  }
+
+  transaction_details {
+    int id_transaction FK
+    string seat
   }
 
   cinemas {
