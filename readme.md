@@ -6,15 +6,16 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
   erDiagram
   direction LR
   roles ||--o{ users : has
+  users ||--o{ sessions : has
   movie_genres }o--|| movies : has
   genres ||--o{ movie_genres : has
-  users ||--o{ transactions : reserve
+  users ||--o{ transactions : make
   transactions }o--|| cinemas : has
   transactions }o--|| locations : has
   transactions }o--|| times : has
   transactions }o--|| payments : has
   transactions ||--o{ transaction_details : has
-  movies ||--o{ transactions : is_booked
+  movies ||--o{ transactions : has
 
   users {
     int id PK
@@ -24,6 +25,11 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string last_name
     string phone
     string id_role FK
+  }
+  sessions {
+    int id PK
+    timestamp created_at
+    int id_users FK
   }
 
   roles {
