@@ -5,19 +5,20 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
 ```mermaid
   erDiagram
   direction LR
-  roles ||--o{ users : has
   users ||--o{ sessions : has
-  movie_genres }o--|| movies : has
-  genres ||--o{ movie_genres : has
+  movie_genres ||--o{ movies : includes
+  genres }o--|| movie_genres : includes
   users ||--o{ transactions : make
-  transactions }o--|| cinemas : has
-  transactions }o--|| locations : has
-  transactions }o--|| times : has
-  transactions }o--|| payments : has
-  transactions ||--o{ transaction_details : has
+  transactions ||--o{ cinemas : has
+  transactions ||--o{ locations : has
+  transactions ||--o{ times : has
+  transactions ||--o{ payment_methods : has
+  transactions }o--|| transaction_details : has
   movies ||--o{ transactions : has
-  movies ||--o{ casts : has
-  movies ||--|| directors : has
+  movie_casts ||--o{  movies  : played
+  casts }o--|| movie_casts : played
+  directors }o--|| movies : directed
+
 
   users {
     int id PK
@@ -26,17 +27,14 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string first_name
     string last_name
     string phone
-    string id_role FK
+    string role FK
   }
   sessions {
     int id PK
     timestamp created_at
-    int id_users FK
-  }
-
-  roles {
-    int id PK
-    string name
+    string token
+    string is_active
+    int id_user FK
   }
 
   movies {
@@ -45,7 +43,7 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string backdrop_url
     string title
     date release_date
-    int duration
+    int runtime
     string overview
     string rating
     string id_director FK
@@ -53,6 +51,10 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string id_cast FK
   }
 
+  movie_casts {
+  int movie_id FK
+  int cast_id FK
+}
   casts {
     int id PK
     string cast
@@ -74,14 +76,18 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
 
   transactions {
     int id PK
-    int virtual_account_number
-    int ticket_price
+    string name
+    string email
+    sting phone
+    int virtual_account
+    bool status_payment
+    int total_payment
     date transaction_date
     int id_movies FK
     int id_cinema FK
     int id_time FK
     int id_location FK
-    int id_payment FK
+    int id_payment_method FK
     int id_user FK
   }
 
@@ -106,9 +112,9 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string time
   }
 
-  payments {
+  payment_methods {
     int id PK
-    string payment
+    string payment_method
   }
 
 ```
