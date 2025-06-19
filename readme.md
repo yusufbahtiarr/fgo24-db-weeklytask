@@ -57,16 +57,16 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
 }
   casts {
     int id PK
-    string cast
+    string cast_name
   }
   directors {
     int id PK
-    string director
+    string director_name
   }
 
   genres {
     int id PK
-    string genre
+    string genre_name
   }
 
   movie_genres {
@@ -98,7 +98,7 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
 
   cinemas {
     int id PK
-    string cinema
+    string cinema_name
     string image_url
   }
 
@@ -115,6 +115,7 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
   payment_methods {
     int id PK
     string payment_method
+    string image_url
   }
 
 ```
