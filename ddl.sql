@@ -11,7 +11,7 @@ create table users (
 
 create table sessions (
   id SERIAL PRIMARY KEY,
-  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+  created_at TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   token TEXT NOT NULL UNIQUE,
   is_active BOOLEAN DEFAULT TRUE,
   id_user INT REFERENCES users(id) ON DELETE CASCADE
@@ -19,17 +19,17 @@ create table sessions (
 
 CREATE TABLE casts (
   id SERIAL PRIMARY KEY,
-  cast VARCHAR(100) NOT NULL
+  cast_name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE genres (
   id SERIAL PRIMARY KEY,
-  genre VARCHAR(100) NOT NULL
+  genre_name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE directors (
   id SERIAL PRIMARY KEY,
-  director VARCHAR(100) NOT NULL
+  director_name VARCHAR(100) NOT NULL
 )
 
 CREATE TABLE movies (
@@ -59,7 +59,7 @@ CREATE TABLE movie_genres (
 
 CREATE TABLE cinemas (
   id SERIAL PRIMARY KEY,
-  cinema VARCHAR(50) NOT NULL,
+  cinema_name VARCHAR(50) NOT NULL,
   image_url VARCHAR(255) NOT NULL
 );
 
