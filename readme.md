@@ -83,6 +83,7 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     bool status_payment
     int total_payment
     date transaction_date
+    date movie_date
     int id_movies FK
     int id_cinema FK
     int id_time FK
