@@ -200,7 +200,7 @@ VALUES
 (10, 2),
 (10, 6);
 
-INSERT INTO transactions (name, email, phone, virtual_account, status_payment, total_payment, transaction_date, id_movie, id_cinema, id_time, id_location, id_payment_method, id_user)
+INSERT INTO transactions (name, email, phone, virtual_account, status_payment, total_payment, movie_date, id_movie, id_cinema, id_time, id_location, id_payment_method, id_user)
 VALUES
 ('Yusuf Bahtiar', 'yusuf@mail.com', '089533452345', '089735324534563456456345', FALSE, 180000, '2025-06-24', 1, 2, 1, 1, 6, 1),
 ('Aisyah Sari', 'aisyah.sari@gmail.com', '081234567890', '123456789012345678901234', FALSE, 60000, '2025-06-25', 1, 1, 2, 2, 1, 2),
@@ -265,4 +265,29 @@ VALUES
 (28, 'E10'), (28, 'E11'), (28, 'E12'),
 (29, 'E13'), (29, 'E14'), (29, 'F1'),
 (30, 'F2'), (30, 'F3');
+
+
+--SELECT
+SELECT t.id, m.title, t.name, to_char(t.movie_date, 'DD-MM-YYYY') AS date, to_char(tm.time,'HH24:MI') AS time, c.cinema_name, string_agg(td.seat,', ') as seats, t.total_payment from transactions t 
+JOIN transaction_details td ON td.id_transaction = t.id
+JOIN movies m ON m.id = t.id_movie
+JOIN times tm ON tm.id = t.id_time
+JOIN cinemas c ON c.id = t.id_cinema
+GROUP BY t.id, m.title, t.name, t.transaction_date, tm.time, c.cinema_name, t.total_payment;
+
+SELECT m.id, m.title,
+  ( SELECT STRING_AGG(c.cast_name, ', ') 
+    FROM movie_casts mc  
+    JOIN casts c ON c.id = mc.id_cast 
+    WHERE mc.id_movie = m.id) 
+  AS cast_names,
+  
+  ( SELECT STRING_AGG(g.genre_name, ', ') 
+    FROM movie_genres mg
+    JOIN genres g ON g.id = mg.id_genre
+    WHERE mg.id_movie = m.id
+  ) AS genre_names,
+  m.overview,
+  m.runtime
+FROM movies m;
 
