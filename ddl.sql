@@ -1,15 +1,20 @@
 -- STRUCTURE
-create table users (
+
+CREATE TYPE role_type AS ENUM ('Admin', 'User');
+CREATE TYPE status_payment_type AS ENUM('Paid', 'Not Paid');
+CREATE TYPE status_ticket_type AS ENUM ('In Active', 'Used');
+
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   email VARCHAR(100) NOT NULL UNIQUE,
   password VARCHAR(100) NOT NULL,
   first_name VARCHAR(100),
   last_name VARCHAR(100),
   phone VARCHAR(15),
-  role VARCHAR(50) NOT NULL
+  role role_type DEFAULT 'User'
 );
 
-create table sessions (
+CREATE TABLE sessions (
   id SERIAL PRIMARY KEY,
   created_at TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   token TEXT NOT NULL UNIQUE,
@@ -41,7 +46,7 @@ CREATE TABLE movies (
   runtime INT NOT NULL,
   overview TEXT NOT NULL,
   rating DECIMAL(3,1) NOT NULL,
-  id_director INT REFERENCES directors(id) ON UPDATE CASCADE ON DELETE SET NULL,
+  id_director INT REFERENCES directors(id) ON UPDATE CASCADE ON DELETE SET NULL
 );
 
 CREATE TABLE movie_casts (
@@ -73,7 +78,8 @@ CREATE Table times (
 
 CREATE TABLE payment_methods (
   id SERIAL PRIMARY KEY,
-  payment_method VARCHAR(50) NOT NULL
+  payment_method VARCHAR(50) NOT NULL,
+  image_url VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE transactions (
@@ -82,10 +88,11 @@ CREATE TABLE transactions (
   email VARCHAR(100) NOT NULL,
   phone VARCHAR(100) NOT NULL,
   virtual_account VARCHAR(50) NOT NULL,
-  status_payment BOOLEAN DEFAULT FALSE,
   total_payment INT NOT NULL,
   transaction_date TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   movie_date DATE NOT NULL,
+  status_payment status_payment_type DEFAULT 'Not Paid',
+  status_ticket status_ticket_type DEFAULT 'In Active',
   id_movie INT REFERENCES movies(id),
   id_cinema INT REFERENCES cinemas(id),
   id_time INT REFERENCES times(id),
