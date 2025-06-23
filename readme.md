@@ -9,14 +9,14 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
   movie_genres ||--o{ movies : includes
   genres }o--|| movie_genres : includes
   users ||--o{ transactions : make
-  transactions ||--o{ cinemas : has
-  transactions ||--o{ locations : has
-  transactions ||--o{ times : has
-  transactions ||--o{ payment_methods : has
-  transactions }o--|| transaction_details : has
-  movies ||--o{ transactions : has
+  transactions ||--o{ cinemas : booked
+  transactions ||--o{ locations : booked
+  transactions ||--o{ times : scheduled
+  transactions ||--o{ payment_methods : uses
+  transactions ||--o{ transaction_details : contains
+  movies ||--o{ transactions : featured
   movie_casts ||--o{  movies  : played
-  casts }o--|| movie_casts : played
+  casts }o--|| movie_casts : acts
   directors }o--|| movies : directed
 
 
@@ -27,7 +27,7 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string first_name
     string last_name
     string phone
-    string role FK
+    string role
   }
   sessions {
     int id PK
@@ -80,10 +80,11 @@ This WeeklyTask Project, presents an Entity-Relationship Diagram (ERD) for an Ku
     string email
     sting phone
     int virtual_account
-    bool status_payment
     int total_payment
     date transaction_date
     date movie_date
+    string status_payment
+    string status_ticket
     int id_movies FK
     int id_cinema FK
     int id_time FK
