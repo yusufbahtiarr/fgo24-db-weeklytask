@@ -121,18 +121,18 @@ VALUES
 ('BRI', '../assets/images/bri.png'),
 ('OVO', '../assets/images/ovo.png');
 
-INSERT INTO movies (poster_url, backdrop_url, title, release_date, runtime, overview, rating, id_director, id_cast, id_genre)
+INSERT INTO movies (poster_url, backdrop_url, title, release_date, runtime, overview, rating, id_director)
 VALUES
-('/qZDjcqvgt3xWcAdc7wHpuqGZ3i.jpg','/lOje1iz4VYWELYWRkZAwI7oIJd0.jpg','Operasi Improvisasi', '2025-06-12', 110, 'Film komedi aksi bertempo cepat yang dibintangi Bryce Dallas Howard sebagai Kat, seorang guru improvisasi komedi yang mempertanyakan apakah peluang suksesnya terlewatkan. Saat polisi yang menyamar menawarkan peluang sangat langka, Kat merekrut dua muridnya untuk menyusup ke dunia gangster London dengan samaran penjahat berbahaya.',6.8, 2, 2, 3),
-('/4akm5FQdZFfNpYGgVyOEXi72eby.jpg','/aQ5nvQGT6mM6TliOM5iSgrKVF4C.jpg','Echo Valley', '2025-06-12', 95, 'Julianne Moore adalah Kate, yang kehidupan tenangnya diganggu oleh putrinya, ketika dia muncul berlumuran darah orang. Ketika Kate mengungkap kebenaran yang mengejutkan, dia mendapati sejauh mana dia akan bertindak demi anaknya.',6.4, 3, 5, 6),
-('/t3cmnXYtxJb9vVL1ThvT2CWSe1n.jpg','/wnnu8htEZBLtwrke9QYfLKx6zjp.jpg','STRAW', '2025-06-12', 115, 'Apa pemicu terakhirnya? Satu hari yang sangat buruk membuat seorang ibu tunggal pekerja keras akhirnya merasa muak—dan melakukan tindakan putus asa yang mengejutkan.',6.5, 3, 1, 8),
-('/kRbpUTRNm6QbLQFPFWUcNC4czEm.jpg','/ozVwXlfxqNsariipatGwa5px3Pm.jpg','Lucy', '2014-07-25', 105, 'Seorang perempuan, yang tidak sengaja terjebak dalam urusan kelam, membalikkan keadaan dengan penyanderanya dan berubah menjadi pejuang tanpa ampun yang menjelma di luar logika manusia.',6.8, 2, 3, 4),
-('/dq18nCTTLpy9PmtzZI6Y2yAgdw5.jpg','/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg','Black Widow', '2021-07-07', 110, 'Dalam film ini akan diceritakan tentang Natasha Romanoff dan Yelena Belova yang merupakan saudara. Pada tahun 1995, saat Natasha dan Yelena masih muda, mereka dibawa pergi oleh orang tua pengganti mereka—Alexei Shostakov yang merupakan seorang tentara atau dikenal sebagai Red Guardian dan Melina Vostokoff sebagai agen rahasia serta mantan Black Widow. Keduanya merupakan agen rahasia yang menyamar sebagai pasangan suami istri untuk menjalankan misi. Mereka kabur dari rumahnya di Ohio setelah menyelesaikan misi mereka.',7.2, 4, 3, 6),
-('/wQubJeuxeQRGSrrRCEmxnHMS1xh.jpg','/wQubJeuxeQRGSrrRCEmxnHMS1xh.jpg','Immaculate', '2024-03-20', 100, 'Cecilia, seorang wanita yang taat iman, disambut hangat di pedesaan Italia yang sempurna di mana dia ditawari peran baru di sebuah biara terkenal. Tetapi menjadi jelas bagi Cecilia bahwa rumah barunya menyimpan rahasia yang gelap dan mengerikan.',7.0, 5, 2, 3),
-('/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg','/uQ4lG7E7mlyKsGvbASftQ6Hu2IX.jpg','Yang Terakhir Dari Kita', '2023-01-15', 110, 'Dua puluh tahun setelah peradaban modern dihancurkan, Joel, seorang penyintas yang tangguh, disewa untuk menyelundupkan Ellie, seorang gadis berusia 14 tahun, keluar dari zona karantina yang menindas. Apa yang dimulai sebagai pekerjaan kecil segera menjadi perjalanan yang brutal dan memilukan, karena mereka berdua harus melintasi Amerika Serikat dan bergantung satu sama lain untuk bertahan hidup.',7.3, 3, 6, 8),
-('/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg','/z7noaCJ4KtmhwHw7QcNtnMMo4Qy.jpg','The Equalizer 2', '2018-07-19', 100, 'Robert McCall seorang mantan agen rahasia selalu berusaha memberikan keadilan bagi orang yang membutuhkannya. Hingga suatu ketika ia mengetahui bahwa sahabat lamanya, Susan Plummer menjadi korban pembunuhan yang dilakukan musuhnya. Bagi McCall, ini adalah panggilan perang. Kini ia mencari tahu siapa yang telah membunuh temannya itu untuk membalaskan dendam.',7.0, 7, 9, 10),
-('/eyWICPcxOuTcDDDbTMOZawoOn8d.jpg','/2uSCHUsmzb6KkQPFSxBQ7bgfJLE.jpg','The Meg', '2018-08-09', 105, 'Lima tahun lalu, seorang ahli penyelam laut dan juga mantan Kapten Angkatan Laut bernama Jonas Taylor (Jason Statham) menghadapi marabahaya yang tidak terduga di relung Palung Mariana yang memaksanya untuk membatalkan misinya dan juga meninggalkan crew nya.',6.5, 8, 8, 9),
-('/M7SUK85sKjaStg4TKhlAVyGlz3.jpg','/70AV2Xx5FQYj20labp0EGdbjI6E.jpg','Wrath of Man', '2021-04-22', 115, 'Wrath of Man bercerita tentang seorang pria bernama H (Jason Statham), yang bekerja di perusahaan truk tunai dengan tanggung jawab memindahkan uang dengan jumlah banyak di sekitar Los Angeles, setiap minggu. H merupakan pria yang misterius.  H adalah anggota baru dalam perusahaan tersebut. Suatu hari, H berhadapan dengan para perampok yang menghadang mobil truk berisi uang dalam jumlah banyak. Karena kemampuan yang dimilikinya, H mampu mengalahkan para perampok tersebut seorang diri.',6.7, 7, 6, 8);
+('/qZDjcqvgt3xWcAdc7wHpuqGZ3i.jpg','/lOje1iz4VYWELYWRkZAwI7oIJd0.jpg','Operasi Improvisasi', '2025-06-12', 110, 'Film komedi aksi bertempo cepat yang dibintangi Bryce Dallas Howard sebagai Kat, seorang guru improvisasi komedi yang mempertanyakan apakah peluang suksesnya terlewatkan. Saat polisi yang menyamar menawarkan peluang sangat langka, Kat merekrut dua muridnya untuk menyusup ke dunia gangster London dengan samaran penjahat berbahaya.',6.8, 2),
+('/4akm5FQdZFfNpYGgVyOEXi72eby.jpg','/aQ5nvQGT6mM6TliOM5iSgrKVF4C.jpg','Echo Valley', '2025-06-12', 95, 'Julianne Moore adalah Kate, yang kehidupan tenangnya diganggu oleh putrinya, ketika dia muncul berlumuran darah orang. Ketika Kate mengungkap kebenaran yang mengejutkan, dia mendapati sejauh mana dia akan bertindak demi anaknya.',6.4, 3),
+('/t3cmnXYtxJb9vVL1ThvT2CWSe1n.jpg','/wnnu8htEZBLtwrke9QYfLKx6zjp.jpg','STRAW', '2025-06-12', 115, 'Apa pemicu terakhirnya? Satu hari yang sangat buruk membuat seorang ibu tunggal pekerja keras akhirnya merasa muak—dan melakukan tindakan putus asa yang mengejutkan.',6.5, 3),
+('/kRbpUTRNm6QbLQFPFWUcNC4czEm.jpg','/ozVwXlfxqNsariipatGwa5px3Pm.jpg','Lucy', '2014-07-25', 105, 'Seorang perempuan, yang tidak sengaja terjebak dalam urusan kelam, membalikkan keadaan dengan penyanderanya dan berubah menjadi pejuang tanpa ampun yang menjelma di luar logika manusia.',6.8, 2),
+('/dq18nCTTLpy9PmtzZI6Y2yAgdw5.jpg','/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg','Black Widow', '2021-07-07', 110, 'Dalam film ini akan diceritakan tentang Natasha Romanoff dan Yelena Belova yang merupakan saudara. Pada tahun 1995, saat Natasha dan Yelena masih muda, mereka dibawa pergi oleh orang tua pengganti mereka—Alexei Shostakov yang merupakan seorang tentara atau dikenal sebagai Red Guardian dan Melina Vostokoff sebagai agen rahasia serta mantan Black Widow. Keduanya merupakan agen rahasia yang menyamar sebagai pasangan suami istri untuk menjalankan misi. Mereka kabur dari rumahnya di Ohio setelah menyelesaikan misi mereka.',7.2, 4),
+('/wQubJeuxeQRGSrrRCEmxnHMS1xh.jpg','/wQubJeuxeQRGSrrRCEmxnHMS1xh.jpg','Immaculate', '2024-03-20', 100, 'Cecilia, seorang wanita yang taat iman, disambut hangat di pedesaan Italia yang sempurna di mana dia ditawari peran baru di sebuah biara terkenal. Tetapi menjadi jelas bagi Cecilia bahwa rumah barunya menyimpan rahasia yang gelap dan mengerikan.',7.0, 5),
+('/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg','/uQ4lG7E7mlyKsGvbASftQ6Hu2IX.jpg','Yang Terakhir Dari Kita', '2023-01-15', 110, 'Dua puluh tahun setelah peradaban modern dihancurkan, Joel, seorang penyintas yang tangguh, disewa untuk menyelundupkan Ellie, seorang gadis berusia 14 tahun, keluar dari zona karantina yang menindas. Apa yang dimulai sebagai pekerjaan kecil segera menjadi perjalanan yang brutal dan memilukan, karena mereka berdua harus melintasi Amerika Serikat dan bergantung satu sama lain untuk bertahan hidup.',7.3, 3),
+('/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg','/z7noaCJ4KtmhwHw7QcNtnMMo4Qy.jpg','The Equalizer 2', '2018-07-19', 100, 'Robert McCall seorang mantan agen rahasia selalu berusaha memberikan keadilan bagi orang yang membutuhkannya. Hingga suatu ketika ia mengetahui bahwa sahabat lamanya, Susan Plummer menjadi korban pembunuhan yang dilakukan musuhnya. Bagi McCall, ini adalah panggilan perang. Kini ia mencari tahu siapa yang telah membunuh temannya itu untuk membalaskan dendam.',7.0, 7),
+('/eyWICPcxOuTcDDDbTMOZawoOn8d.jpg','/2uSCHUsmzb6KkQPFSxBQ7bgfJLE.jpg','The Meg', '2018-08-09', 105, 'Lima tahun lalu, seorang ahli penyelam laut dan juga mantan Kapten Angkatan Laut bernama Jonas Taylor (Jason Statham) menghadapi marabahaya yang tidak terduga di relung Palung Mariana yang memaksanya untuk membatalkan misinya dan juga meninggalkan crew nya.',6.5, 8),
+('/M7SUK85sKjaStg4TKhlAVyGlz3.jpg','/70AV2Xx5FQYj20labp0EGdbjI6E.jpg','Wrath of Man', '2021-04-22', 115, 'Wrath of Man bercerita tentang seorang pria bernama H (Jason Statham), yang bekerja di perusahaan truk tunai dengan tanggung jawab memindahkan uang dengan jumlah banyak di sekitar Los Angeles, setiap minggu. H merupakan pria yang misterius.  H adalah anggota baru dalam perusahaan tersebut. Suatu hari, H berhadapan dengan para perampok yang menghadang mobil truk berisi uang dalam jumlah banyak. Karena kemampuan yang dimilikinya, H mampu mengalahkan para perampok tersebut seorang diri.',6.7, 7);
 
 INSERT INTO movie_casts(id_movie,id_cast)
 VALUES
@@ -200,38 +200,38 @@ VALUES
 (10, 2),
 (10, 6);
 
-INSERT INTO transactions (name, email, phone, virtual_account, status_payment, total_payment, movie_date, id_movie, id_cinema, id_time, id_location, id_payment_method, id_user)
+INSERT INTO transactions (name, email, phone, virtual_account, total_payment, movie_date, id_movie, id_cinema, id_time, id_location, id_payment_method, id_user)
 VALUES
-('Yusuf Bahtiar', 'yusuf@mail.com', '089533452345', '089735324534563456456345', FALSE, 180000, '2025-06-24', 1, 2, 1, 1, 6, 1),
-('Aisyah Sari', 'aisyah.sari@gmail.com', '081234567890', '123456789012345678901234', FALSE, 60000, '2025-06-25', 1, 1, 2, 2, 1, 2),
-('Bima Santoso', 'bima.santoso@yahoo.com', '087788990011', '456789012345678901234567', FALSE, 120000, '2025-06-26', 3, 3, 3, 3, 2, 3),
-('Citra Lestari', 'citra.lestari@outlook.com', '082199887766', '789012345678901234567890', TRUE, 120000, '2025-06-27', 4, 4, 4, 4, 3, 4),
-('Dedi Kurniawan', 'dedi.kurniawan@mail.com', '085566778899', '234567890123456789012345', FALSE, 180000, '2025-06-28', 5, 2, 5, 5, 4, 5),
-('Eka Putri', 'eka.putri@gmail.com', '081122334455', '567890123456789012345678', TRUE, 120000, '2025-06-29', 6, 1, 1, 1, 5, 6),
-('Fajar Nugroho', 'fajar.nugroho@yahoo.com', '089977665544', '890123456789012345678901', FALSE, 120000, '2025-06-30', 7, 3, 2, 2, 7, 7),
-('Gita Rahayu', 'gita.rahayu@outlook.com', '083344556677', '345678901234567890123456', TRUE, 180000, '2025-06-24', 8, 4, 3, 3, 8, 8),
-('Hadi Wibowo', 'hadi.wibowo@mail.com', '087711223344', '678901234567890123456789', FALSE, 240000, '2025-06-25', 9, 2, 4, 4, 1, 9),
-('Indah Permata', 'indah.permata@gmail.com', '081988776655', '901234567890123456789012', TRUE, 120000, '2025-06-26', 10, 1, 5, 5, 2, 10),
-('Joko Susilo', 'joko.susilo@yahoo.com', '085522334466', '123456789012345678901235', FALSE, 180000, '2025-06-27', 1, 3, 1, 1, 3, 1),
-('Kania Dewi', 'kania.dewi@outlook.com', '082211445566', '456789012345678901234568', TRUE, 180000, '2025-06-28', 2, 4, 2, 2, 4, 2),
-('Lukman Hakim', 'lukman.hakim@mail.com', '089633445577', '789012345678901234567891', FALSE, 120000, '2025-06-29', 3, 2, 3, 3, 5, 3),
-('Mira Amalia', 'mira.amalia@gmail.com', '081344556688', '234567890123456789012346', TRUE, 180000, '2025-06-30', 4, 1, 4, 4, 6, 4),
-('Nanda Pratama', 'nanda.pratama@yahoo.com', '087755667799', '567890123456789012345679', FALSE, 120000, '2025-06-24', 5, 3, 5, 5, 7, 5),
-('Oki Setiawan', 'oki.setiawan@outlook.com', '085588779900', '890123456789012345678902', TRUE, 180000, '2025-06-25', 6, 4, 1, 1, 8, 6),
-('Putri Anggraini', 'putri.anggraini@mail.com', '081677889011', '345678901234567890123457', FALSE, 240000, '2025-06-26', 7, 2, 2, 2, 1, 7),
-('Rudi Hartono', 'rudi.hartono@gmail.com', '082299001122', '678901234567890123456790', TRUE, 120000, '2025-06-27', 8, 1, 3, 3, 2, 8),
-('Sari Wulandari', 'sari.wulandari@yahoo.com', '089511223344', '901234567890123456789013', FALSE, 180000, '2025-06-28', 9, 3, 4, 4, 3, 9),
-('Teguh Santoso', 'teguh.santoso@outlook.com', '087822334455', '123456789012345678901236', TRUE, 120000, '2025-06-29', 10, 4, 5, 5, 4, 10),
-('Umi Kalsum', 'umi.kalsum@mail.com', '081933445566', '456789012345678901234569', FALSE, 180000, '2025-06-30', 1, 2, 1, 1, 5, 1),
-('Vino Ramadhan', 'vino.ramadhan@gmail.com', '085644556677', '789012345678901234567892', TRUE, 120000, '2025-06-24', 2, 1, 2, 2, 6, 2),
-('Wulan Sari', 'wulan.sari@yahoo.com', '082155667788', '234567890123456789012347', FALSE, 180000, '2025-06-25', 3, 3, 3, 3, 7, 3),
-('Xaverius Tan', 'xaverius.tan@outlook.com', '089766778899', '567890123456789012345680', TRUE, 60000, '2025-06-26', 4, 4, 4, 4, 8, 4),
-('Yanti Puspita', 'yanti.puspita@mail.com', '081377889900', '890123456789012345678903', FALSE, 60000, '2025-06-27', 5, 2, 5, 5, 1, 5),
-('Zainal Abidin', 'zainal.abidin@gmail.com', '087988990011', '345678901234567890123458', TRUE, 120000, '2025-06-28', 6, 1, 1, 1, 2, 6),
-('Amira Syifa', 'amira.syifa@yahoo.com', '085299001122', '678901234567890123456791', FALSE, 120000, '2025-06-29', 7, 3, 2, 2, 3, 7),
-('Budi Pranoto', 'budi.pranoto@outlook.com', '082411223344', '901234567890123456789014', TRUE, 180000, '2025-06-30', 8, 4, 3, 3, 4, 8),
-('Candra Wijaya', 'candra.wijaya@mail.com', '089522334455', '123456789012345678901237', FALSE, 180000, '2025-06-24', 9, 2, 4, 4, 5, 9),
-('Dewi Lestari', 'dewi.lestari@gmail.com', '081633445566', '456789012345678901234570', TRUE, 120000, '2025-06-25', 10, 1, 5, 5, 6, 10);
+('Yusuf Bahtiar', 'yusuf@mail.com', '089533452345', '089735324534563456456345', 180000, '2025-06-24', 1, 2, 1, 1, 6, 1),
+('Aisyah Sari', 'aisyah.sari@gmail.com', '081234567890', '123456789012345678901234', 60000, '2025-06-25', 1, 1, 2, 2, 1, 2),
+('Bima Santoso', 'bima.santoso@yahoo.com', '087788990011', '456789012345678901234567', 120000, '2025-06-26', 3, 3, 3, 3, 2, 3),
+('Citra Lestari', 'citra.lestari@outlook.com', '082199887766', '789012345678901234567890', 120000, '2025-06-27', 4, 4, 4, 4, 3, 4),
+('Dedi Kurniawan', 'dedi.kurniawan@mail.com', '085566778899', '234567890123456789012345', 180000, '2025-06-28', 5, 2, 5, 5, 4, 5),
+('Eka Putri', 'eka.putri@gmail.com', '081122334455', '567890123456789012345678', 120000, '2025-06-29', 6, 1, 1, 1, 5, 6),
+('Fajar Nugroho', 'fajar.nugroho@yahoo.com', '089977665544', '890123456789012345678901', 120000, '2025-06-30', 7, 3, 2, 2, 7, 7),
+('Gita Rahayu', 'gita.rahayu@outlook.com', '083344556677', '345678901234567890123456', 180000, '2025-06-24', 8, 4, 3, 3, 8, 8),
+('Hadi Wibowo', 'hadi.wibowo@mail.com', '087711223344', '678901234567890123456789', 240000, '2025-06-25', 9, 2, 4, 4, 1, 9),
+('Indah Permata', 'indah.permata@gmail.com', '081988776655', '901234567890123456789012', 120000, '2025-06-26', 10, 1, 5, 5, 2, 10),
+('Joko Susilo', 'joko.susilo@yahoo.com', '085522334466', '123456789012345678901235', 180000, '2025-06-27', 1, 3, 1, 1, 3, 1),
+('Kania Dewi', 'kania.dewi@outlook.com', '082211445566', '456789012345678901234568', 180000, '2025-06-28', 2, 4, 2, 2, 4, 2),
+('Lukman Hakim', 'lukman.hakim@mail.com', '089633445577', '789012345678901234567891', 120000, '2025-06-29', 3, 2, 3, 3, 5, 3),
+('Mira Amalia', 'mira.amalia@gmail.com', '081344556688', '234567890123456789012346', 180000, '2025-06-30', 4, 1, 4, 4, 6, 4),
+('Nanda Pratama', 'nanda.pratama@yahoo.com', '087755667799', '567890123456789012345679', 120000, '2025-06-24', 5, 3, 5, 5, 7, 5),
+('Oki Setiawan', 'oki.setiawan@outlook.com', '085588779900', '890123456789012345678902', 180000, '2025-06-25', 6, 4, 1, 1, 8, 6),
+('Putri Anggraini', 'putri.anggraini@mail.com', '081677889011', '345678901234567890123457', 240000, '2025-06-26', 7, 2, 2, 2, 1, 7),
+('Rudi Hartono', 'rudi.hartono@gmail.com', '082299001122', '678901234567890123456790', 120000, '2025-06-27', 8, 1, 3, 3, 2, 8),
+('Sari Wulandari', 'sari.wulandari@yahoo.com', '089511223344', '901234567890123456789013', 180000, '2025-06-28', 9, 3, 4, 4, 3, 9),
+('Teguh Santoso', 'teguh.santoso@outlook.com', '087822334455', '123456789012345678901236', 120000, '2025-06-29', 10, 4, 5, 5, 4, 10),
+('Umi Kalsum', 'umi.kalsum@mail.com', '081933445566', '456789012345678901234569', 180000, '2025-06-30', 1, 2, 1, 1, 5, 1),
+('Vino Ramadhan', 'vino.ramadhan@gmail.com', '085644556677', '789012345678901234567892', 120000, '2025-06-24', 2, 1, 2, 2, 6, 2),
+('Wulan Sari', 'wulan.sari@yahoo.com', '082155667788', '234567890123456789012347', 180000, '2025-06-25', 3, 3, 3, 3, 7, 3),
+('Xaverius Tan', 'xaverius.tan@outlook.com', '089766778899', '567890123456789012345680', 60000, '2025-06-26', 4, 4, 4, 4, 8, 4),
+('Yanti Puspita', 'yanti.puspita@mail.com', '081377889900', '890123456789012345678903', 60000, '2025-06-27', 5, 2, 5, 5, 1, 5),
+('Zainal Abidin', 'zainal.abidin@gmail.com', '087988990011', '345678901234567890123458', 120000, '2025-06-28', 6, 1, 1, 1, 2, 6),
+('Amira Syifa', 'amira.syifa@yahoo.com', '085299001122', '678901234567890123456791', 120000, '2025-06-29', 7, 3, 2, 2, 3, 7),
+('Budi Pranoto', 'budi.pranoto@outlook.com', '082411223344', '901234567890123456789014', 180000, '2025-06-30', 8, 4, 3, 3, 4, 8),
+('Candra Wijaya', 'candra.wijaya@mail.com', '089522334455', '123456789012345678901237', 180000, '2025-06-24', 9, 2, 4, 4, 5, 9),
+('Dewi Lestari', 'dewi.lestari@gmail.com', '081633445566', '456789012345678901234570', 120000, '2025-06-25', 10, 1, 5, 5, 6, 10);
 
 INSERT INTO transaction_details (id_transaction, seat)
 VALUES
@@ -268,7 +268,7 @@ VALUES
 
 
 --SELECT
-SELECT t.id, m.title, t.name, to_char(t.movie_date, 'DD-MM-YYYY') AS date, to_char(tm.time,'HH24:MI') AS time, c.cinema_name, string_agg(td.seat,', ') as seats, t.total_payment from transactions t 
+SELECT t.id, m.title, t.name, to_char(t.movie_date, 'DD-MM-YYYY') AS date, to_char(tm.time,'HH24:MI') AS time, c.cinema_name, STRING_AGG(td.seat,', ') AS seats, t.total_payment from transactions t 
 JOIN transaction_details td ON td.id_transaction = t.id
 JOIN movies m ON m.id = t.id_movie
 JOIN times tm ON tm.id = t.id_time
